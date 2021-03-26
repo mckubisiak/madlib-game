@@ -1,0 +1,19 @@
+div {
+    position: absolute;
+    border: 1px solid red;
+}
+body {
+    max-width: 200px;
+    height: 1000px;
+    background-repeat: no-repeat;
+    background-size: 1000px 1104px;
+    overflow: scroll;
+    background-position: center;
+    text-align: ;
+    background-image: url(https://images.squarespace-cdn.com/content/v1/5d2a7eb9299f610001eee3d4/1589382208065-XZXP3SMW224HP66SHAI3/ke17ZwdGBToddI8pDm48kK4EJApriTl0eIyeU-QOTnt7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QHyNOqBUUEtDDsRWrJLTmQh-0nIJac36sqamh6t4rPwbg8g8lMHGab5o5sjPM4E0GS3ByHJM0C5kQ1wfUI-1_/marty-nelson.png);
+    position: absolute;
+}
+.story {
+    margin-left: 500px;
+}
+
