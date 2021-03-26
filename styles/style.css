@@ -1,6 +1,8 @@
 div {
     position: absolute;
     border: 1px solid red;
+    border-radius: 10px;
+    padding: 5px;
 }
 body {
     max-width: 200px;
@@ -15,10 +17,27 @@ body {
 .story {
     margin-left: 200px;
     width: 420px;
-    background: ;
 }
 
 .inputs {
     margin-top: 200px;
 }
 
+.hidden {
+    display: none;
+}
+
+header {
+    /* height: 100px; */
+    width: 400px;
+    margin-left: 50px;
+    background: white;
+    border-radius: 10px;
+    padding: 2px 5px;
+    line-height: 15px;
+    margin-bottom: 10px;
+}
+
+.instructions {
+
+}

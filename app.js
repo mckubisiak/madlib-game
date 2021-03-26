@@ -12,6 +12,8 @@ button.addEventListener('click', () => {
     output1.textContent = input1.value;
     output3.textContent = input1.value;
     output2.textContent = input2.value;
+    const div = document.getElementById('story');
+    div.classList.remove('hidden');
 
 });
 
