@@ -2,8 +2,15 @@
 
 const input1 = document.getElementById('input1');
 const input2 = document.getElementById('input2');
+const input3 = document.getElementById('input3');
+const input4 = document.getElementById('input4');
+const input5 = document.getElementById('input5');
+const input6 = document.getElementById('input6');
+const input7 = document.getElementById('input7');
 const button = document.getElementById('button');
 const output1 = document.getElementById('noun1');
+const output4 = document.getElementById('noun1');
+const output5 = document.getElementById('noun1');
 const output2 = document.getElementById('verb1');
 const output3 = document.getElementById('noun2');
 
