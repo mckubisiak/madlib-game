@@ -8,12 +8,11 @@
     <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
-    <header><h1>MartyLib Official Homepage</h1></header>
-    <div class="instructions">
-        <span>Fill in each blank press submit for a fun story!!</span>
-        
-    </div>
-    <div class="inputs">
+    <header>
+        <h1>MartyLib Official Homepage</h1>
+        <span>Instructions: Fill in each blank press submit for a fun story!!</span>
+    </header>
+    <div class="inputs" id="inputs">
         <label>
             Adjective
             <input type="text" id="input1" value="adjective">
@@ -42,19 +41,20 @@
             Adjective
             <input type="text" id="input7" value="adjective">
         </label>
-        <button id='button'>Submit</button>
+        <button id='button-input'>Submit</button>
     </div>
     <div class="story hidden" id="story">
         <span>You think I'm an <span id="adj1"> ignorant </span> <span id="noun2">savage</span><br>
-            And you've been so many <span id="location3">places</span> <br>
-            But still I cannot see<br>
-            If the <span id="noun4">savage one</span> is me<br>
-            How can there be so much that you don't <span id="verb5">know</span><br>
-            You don't <span id="verb6">know</span> <br>
-            You think you own whatever land you land on<br>
-            The Earth is just a <span id="adj7"> dead </span> thing you can claim<br>
-            
-            
+        And you've been so many <span id="location3">places</span> <br>
+        But still I cannot see<br>
+        If the <span id="noun4">savage one</span> is me<br>
+        How can there be so much that you don't <span id="verb5">know</span><br>
+        You don't <span id="verb6">know</span> <br>
+        You think you own whatever land you land on<br>
+        The Earth is just a <span id="adj7"> dead </span> thing you can claim<br>
+        
+        
+        <button id='button-reset'>Reset</button>
     </div>
 
 
