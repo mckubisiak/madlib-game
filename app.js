@@ -1,41 +1,77 @@
-//DOM Element input variables
-const input1 = document.getElementById('input1');
-const input2 = document.getElementById('input2');
-const input3 = document.getElementById('input3');
-const input4 = document.getElementById('input4');
-const input5 = document.getElementById('input5');
-const input6 = document.getElementById('input6');
-const input7 = document.getElementById('input7');
-const buttonInput = document.getElementById('button-input');
+//Array of DOM Element input and output tag objects
+const madlibs = [
+    {
+        inTag: 'input1',
+        outTag: 'adj1'
+    },
+    {
+        inTag: 'input2',
+        outTag: 'noun2'
+    },
+    {
+        inTag: 'input3',
+        outTag: 'location3'
+    },
+    {
+        inTag: 'input4',
+        outTag: 'noun4'
+    },
+    {
+        inTag: 'input5',
+        outTag: 'verb5'
+    },
+    {
+        inTag: 'input6',
+        outTag: 'verb6'
+    },
+    {
+        inTag: 'input7',
+        outTag: 'adj7'
+    }
+];
 
-//DOM Element story variables
-const output1 = document.getElementById('adj1');
-const output2 = document.getElementById('noun2');
-const output3 = document.getElementById('location3');
-const output4 = document.getElementById('noun4');
-const output5 = document.getElementById('verb5');
-const output6 = document.getElementById('verb6');
-const output7 = document.getElementById('adj7');
-const buttonReset = document.getElementById('button-reset');
+//functions
+function sync(inTag, outTag) {
+    // declare variables and fill with elements using tag arguments
+    const in1 = document.getElementById(inTag);
+    const out1 = document.getElementById(outTag);
+    //replace the story span with the input value
+    out1.textContent = in1.value;
+    // in1.value = '';
+}  
+
+function init(arr) {
+    //for each object in the array
+    for (let i = 0; i < arr.length; i++) {
+        //assign the object to a variable
+        const obj = arr[i];
+        //run sync function with the tags in that object
+        sync(obj.inTag, obj.outTag);
+    }
+}
+
+function swapDisplay(div1, div2) {
+    //remove hidden class, making this div visible
+    div1.classList.remove('hidden');
+    //add hidden class, making this div invisible
+    div2.classList.add('hidden');
+}
 
 //div elements to hide or unhide
 const divStory = document.getElementById('story');
 const divInput = document.getElementById('inputs');
 
-// set event listeners to update state and DOM
-buttonInput.addEventListener('click', () => {
-    output1.textContent = input1.value;
-    output2.textContent = input2.value;
-    output3.textContent = input3.value;
-    output4.textContent = input4.value;
-    output5.textContent = input5.value;
-    output6.textContent = input6.value;
-    output7.textContent = input7.value;
-    divStory.classList.remove('hidden');
-    divInput.classList.add('hidden');
-});
+//declare button elements to create event listeners
+const buttonInput = document.getElementById('button-input');
+const buttonReset = document.getElementById('button-reset');
 
+// set event listener to sync inputs to story outputs - displays story, hiding inputs
+buttonInput.addEventListener('click', () => {
+    init(madlibs);
+    swapDisplay(divStory, divInput);
+});        
+
+// set event listener to swap the display back to inputs, hiding the story
 buttonReset.addEventListener('click', () => {
-    divInput.classList.remove('hidden');
-    divStory.classList.add('hidden');
+    swapDisplay(divInput, divStory);
 });
